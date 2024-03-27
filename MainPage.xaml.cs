@@ -2,23 +2,28 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+        public int index;
 
         public MainPage()
         {
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private void BNTRolar_Clicked(object sender, EventArgs e)
         {
-            count++;
+            Random rand = new Random();
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+            if (index !=  -1 && pickerDado.SelectedItem != null)
+            {
+                int min = 1;
+                int max = (int)pickerDado.SelectedItem;
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+                int v = rand.Next(min, max + 1);
+                dadoValue.Text = v.ToString();
+            }else
+            {
+                DisplayAlert("Atenção", "Você precisa selecionar um dado primeiro.", "OK");
+            }
         }
     }
 
