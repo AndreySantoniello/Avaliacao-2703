@@ -5,50 +5,5 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="avaliacao2703.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            HorizontalOptions="Center"
-            Spacing="10"
-            MaximumWidthRequest="400">
-
-
-            <Label
-                Text="ROLADOR DE DADOS"
-                FontSize="40"
-                FontAttributes="Bold"
-                Padding="25,0"
-                HorizontalTextAlignment="Center"
-            />
-
-            <Label
-                x:Name="dadoValue"
-                FontSize="70"
-                Text="6"
-                Padding="25,0"
-                FontAttributes="Bold"
-                HorizontalTextAlignment="Center"
-            />
-            
-            <Picker 
-                x:Name="pickerDado"
-                Title="Quantidade de lados: "
-                SelectedItem="index"
-                >
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:Int32}">
-                        <x:Int32>4</x:Int32>
-                        <x:Int32>6</x:Int32>
-                        <x:Int32>10</x:Int32>
-                        <x:Int32>20</x:Int32>
-                        <x:Int32>100</x:Int32>
-                    </x:Array>
-                </Picker.ItemsSource>
-            </Picker>
-
-            <Button x:Name="BNTRolar" Text="ROLAR O DADO" Clicked="BNTRolar_Clicked" Margin="0,25" BackgroundColor="#4F4F4F"/>
-
-
-        </VerticalStackLayout>
-    </ScrollView>
-
+    
 </ContentPage>
