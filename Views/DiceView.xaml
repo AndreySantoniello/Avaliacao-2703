@@ -9,7 +9,6 @@
         Spacing="10"
         MaximumWidthRequest="400">
 
-
             <Label
             Text="ROLADOR DE DADOS"
             FontSize="40"
@@ -20,8 +19,8 @@
 
             <Label
             x:Name="dadoValue"
-            FontSize="70"
-            Text="6"
+            Text="{Binding Dadovalue}"
+            FontSize="Large"
             Padding="25,0"
             FontAttributes="Bold"
             HorizontalTextAlignment="Center"
@@ -30,7 +29,7 @@
             <Picker 
             x:Name="pickerDado"
             Title="Quantidade de lados: "
-            SelectedItem="index"
+            SelectedItem="{Binding Numerolados}"
             >
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:Int32}">
@@ -43,7 +42,14 @@
                 </Picker.ItemsSource>
             </Picker>
 
-            <Button x:Name="BNTRolar" Text="ROLAR O DADO" Clicked="BNTRolar_Clicked" Margin="0,25" BackgroundColor="#4F4F4F"/>
+            <Button 
+                x:Name="BNTRolar" 
+                Text="ROLAR O DADO" 
+                Command="{Binding Rolarcommand}"
+                Margin="0,25" 
+                BackgroundColor="#404040"
+                
+            />
 
 
         </VerticalStackLayout>
